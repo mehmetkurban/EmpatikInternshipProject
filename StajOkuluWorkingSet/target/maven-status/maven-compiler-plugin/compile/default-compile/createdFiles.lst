@@ -1,0 +1,7 @@
+com\stajokulu\service\UserServiceImpl.class
+com\stajokulu\rest\ApplicationConfig.class
+com\stajokulu\siteuser\SiteUser.class
+com\stajokulu\siteuser\SiteUser_.class
+com\stajokulu\controller\UserManagedBean.class
+com\stajokulu\rest\UserRestService.class
+com\stajokulu\service\UserService.class

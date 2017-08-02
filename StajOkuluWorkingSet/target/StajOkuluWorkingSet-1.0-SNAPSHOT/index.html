@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link href="resources/css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+        
+    </head>
+    <body>
+        
+        <script>
+           $(document).ready(function(){
+                $.getJSON( "http://localhost:8080/StajOkuluWorkingSet/rest/userListesi/getir",{ format: "jsonp"} )
+                .done(function( json ) {
+                  console.log( "JSON Data: " + json[1].email );
+                    
+                        $.each(json, function(i, item) {
+                            $('tbody').append('<tr class="child"><td>'+json[i].email+'</td>\n\
+                    <td>'+json[i].userName+'</td><td>'+json[i].firstName+'</td></tr>');
+                        });
+                        
+                });
+            });
+        </script>
+
+        <div data-role="page">
+            <div data-role="header"  data-position="fixed">
+                <h1>Kullanıcı Listesi</h1>
+            </div>
+            <table data-role="table" data-mode="columntoggle"  class="ui-responsive ui-shadow" id="myTable">
+                <thead>
+                    <tr>
+                        <th data-priority="6">İsim - Soyisim</th>
+                        <th data-priority="2">Email</th>
+                        <th data-priority="1">Kullanıcı Adı </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+              
+              
+                
+                </tbody>
+            </table>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Kullanıcı Listesi</h1>
+            </div>
+
+        </div>
+        
+    </body>
+</html>
