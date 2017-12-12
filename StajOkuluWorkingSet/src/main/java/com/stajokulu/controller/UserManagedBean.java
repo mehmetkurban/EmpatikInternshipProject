@@ -21,10 +21,7 @@ import javax.inject.Named;
 import javax.inject.Inject;
 import javax.naming.InitialContext;
 
-/**
- *
- * @author abdurrahmanturkeri
- */
+
 @ManagedBean(name = "userManagedBean")
 @RequestScoped
 public class UserManagedBean implements Serializable{
