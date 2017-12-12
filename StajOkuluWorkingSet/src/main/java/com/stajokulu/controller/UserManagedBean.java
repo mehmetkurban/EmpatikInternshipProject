@@ -1,8 +1,5 @@
 package com.stajokulu.controller;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Tem*/
 
 
 import com.stajokulu.service.UserService;
@@ -32,9 +29,7 @@ public class UserManagedBean implements Serializable{
     private SiteUser siteUser=new SiteUser();
     private List<SiteUser> userList;
 
-    /**
-     * Creates a new instance of QuestionManagedBean
-     */
+    
     public UserManagedBean() {
         
     
